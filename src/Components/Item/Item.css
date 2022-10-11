@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}    
+main{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    background-color: rgb(190, 189, 189);
+
+}
+.fondo{
+    margin: 3rem;
+    border: 10px;
+    border-color: black;
+}
+
+.tarjetaImagen{
+   position:relative;
+   border-radius: 20px;
+   border-color: black;
+   width: 250px;
+  
+}
+
+.boton{
+display: inline-block;
+font-size: 20px;
+margin-left: 40%;
+margin-bottom: 10%;
+}

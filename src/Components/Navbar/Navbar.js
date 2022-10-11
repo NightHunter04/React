@@ -1,8 +1,7 @@
 import React from "react";
 import  './Navbar.css';
 import logo from '../../assets/pearl.jpg';
-import ComponenteNavBar from '../ComponenteNavBar'
-import ItemListContainer from "./ItemListContainer";
+import ComponenteNavBar from '../ComponenteNavBar/ComponenteNavBar'
 import { Button } from "@mui/material";
 
 
@@ -12,7 +11,6 @@ const Navbar = ({children}) =>{
     <header>
       <img className="Bateria" src= {logo} alt="Logo de Tresillo" />
       <h1>Tresillo Drum House </h1>
-      <ItemListContainer/>
           <ul>
              <a href="">Baterias</a>
              <a href="">Platillos</a>
@@ -21,7 +19,7 @@ const Navbar = ({children}) =>{
           </ul> 
            {children}
       
-    <Button className="carrito"><ComponenteNavBar/></Button>
+    <button className="carrito"><ComponenteNavBar/></button>
     </header>
   )
 }
