@@ -3,23 +3,35 @@ import  './Navbar.css';
 import logo from '../../assets/pearl.jpg';
 import ComponenteNavBar from '../ComponenteNavBar/ComponenteNavBar'
 import { Button } from "@mui/material";
+import { Link ,Navlink } from "react-router-dom";
 
 
 const Navbar = ({children}) =>{
 
+  const categorias = [
+    {nombre: "Baterias", id : 0, ruta: "/categoria/Baterias"},
+    {nombre: "Platillos", id: 1, ruta :" /categoria/Platillos"},
+    {nombre:"Accesorios", id: 2, ruta:"/categoria/Accesorios"},
+    {nombre:"Nosotros", id: 3, ruta: "/categoria/Nosotros"},
+]
   return (
     <header>
-      <img className="Bateria" src= {logo} alt="Logo de Tresillo" />
+      <Link to ="/">
+        <img className="Bateria" src= {logo} alt="Logo de Tresillo" />
+      </Link>
       <h1>Tresillo Drum House </h1>
           <ul>
-             <a href="">Baterias</a>
-             <a href="">Platillos</a>
-             <a href="">Accesorios</a>
-             <a href="">Nosotros</a>
+            {
+             categorias.map ((categoria)=>{
+              return <Link key={categoria.id} to={categoria.ruta}>{categoria.nombre}</Link>
+             } )
+            }
           </ul> 
            {children}
-      
-    <button className="carrito"><ComponenteNavBar/></button>
+     <Link to= "/cart">
+     <button className="carrito"><ComponenteNavBar/></button>
+     </Link> 
+    
     </header>
   )
 }

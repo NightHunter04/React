@@ -23,18 +23,18 @@ import "./Item.css"
         
           <p>Precio: ${producto.Precio}</p>
         </CardContent>
-     
-        <button className="boton" size="large" color="primary">
+           <button className="boton" size="large" color="primary">
        Descripcion
         </button>
-        
-      
-    </Card>
-    </div>
-    
-  );
+        </Card>
+    </div>    
+   );
 }
-export default Item;
+export default Item;      
+ 
+  
+    
+
 
 
 
