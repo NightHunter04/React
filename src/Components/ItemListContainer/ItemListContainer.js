@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import ItemDetailContainer from "../Containers/ItemDetailContainer/ItemDetailContainer"
-
+import { useParams } from "react-router-dom";
 
 const productos = [
   {
     id: 0,
+    categoria: "Baterias",
     nombre: "Tama Swingstar",
     Stock: 5,
     Precio: 120000,
@@ -13,6 +14,7 @@ const productos = [
     img:"https://novaeramusica.com/5729/tama-swingstar-bateria-ss52fh5c-vts.jpg"  },
   {
     id: 1,
+    categoria: "Baterias",
     nombre: "Tama RockStar",
     Stock: 5,
     Precio: 150000,
@@ -20,6 +22,7 @@ const productos = [
     img:"https://http2.mlstatic.com/D_NQ_NP_112901-MLA20425323999_092015-O.jpg " },
   {
     id: 2,
+    categoria: "Baterias",
     nombre: "Tama Rythmn",
     Stock: 5,
     Precio: 160000,
@@ -28,6 +31,7 @@ const productos = [
   },
   {
     id: 3,
+    categoria: "Baterias",
     nombre: "Tama Silverstar",
     Stock: 5,
     Precio: 180000,
@@ -36,6 +40,7 @@ const productos = [
   },
   {
     id: 4,
+    categoria: "Baterias",
     nombre: "Tama Acrilica",
     Stock: 5,
     Precio: 180000,
@@ -44,6 +49,7 @@ const productos = [
   },
   {
     id: 5,
+    categoria: "Baterias",
     nombre: "Tama Doble-Bombo",
     Stock: 5,
     Precio: 430000,
@@ -52,6 +58,7 @@ const productos = [
   },
   {
     id: 6,
+    categoria :"Platillos",
     nombre: "Set platos",
     Stock: 5,
     Precio: 100000,
@@ -60,6 +67,7 @@ const productos = [
   }, 
   {
     id: 7,
+    categoria :"Platillos",
     nombre: "Ride",
     Stock: 5,
     Precio: 95000,
@@ -69,6 +77,7 @@ const productos = [
   
   {
     id: 8,
+    categoria :"Platillos",
     nombre: "Hi-Hat",
     Stock: 5,
     Precio: 120000,
@@ -78,6 +87,7 @@ const productos = [
   
   {
     id: 9,
+    categoria :"Platillos",
     nombre: "China",
     Stock: 5,
     Precio: 130000,
@@ -87,6 +97,7 @@ const productos = [
   
   {
     id: 10,
+    categoria :"Platillos",
     nombre: "Crash",
     Stock: 5,
     Precio: 100000,
@@ -96,6 +107,7 @@ const productos = [
   
   {
     id: 11,
+    categoria :"Platillos",
     nombre: "Splash",
     Stock: 5,
     Precio: 43000,
@@ -105,6 +117,7 @@ const productos = [
 
   {
     id: 12,
+    categoria :"Accesorios",
     nombre: "Porta Baquetas",
     Stock: 5,
     Precio: 8000,
@@ -113,6 +126,7 @@ const productos = [
   },
   {
     id: 13,
+    categoria :"Accesorios",
     nombre: "Set Parches",
     Stock: 5,
     Precio: 18000,
@@ -121,6 +135,7 @@ const productos = [
   },
   {
     id: 14,
+    categoria :"Accesorios",
     nombre: "Banqueta",
     Stock: 5,
     Precio: 43000,
@@ -129,6 +144,7 @@ const productos = [
   },
   {
     id: 15,
+    categoria :"Accesorios",
     nombre: "Set Soportes y pedal",
     Stock: 5,
     Precio: 170000,
@@ -137,6 +153,7 @@ const productos = [
   },
   {
     id: 16,
+    categoria :"Accesorios",
     nombre: "Corral",
     Stock: 5,
     Precio: 78000,
@@ -146,20 +163,33 @@ const productos = [
   
   
 ];
+const getData = new Promise(resolve => {
+  setTimeout(() => {
+      resolve(productos);
+  }, 2000);
+});
 
 function ItemListContainer({ greeting }) {
-  
+  const {id} = useParams ()
+  console.log(id);
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const getData = new Promise(resolve => {
-        setTimeout(() => {
-            resolve(productos);
-        }, 2000);
-    });
-    getData.then(res => setData(res));
+    getData
+    .then ((data)=>{
+     if (id){
+      setData(data.filter(productos =>productos.categoria === id ))
+    }else {
+      setData (data)
+    }
+    
+    })
+    .catch ((error) =>{
+      console.log("error");
+    })
+   
 
-}, [])
+}, [id])
 
   return (
     <>

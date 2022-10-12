@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 export const ItemDetailContainer = ({ greeting }) => {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
