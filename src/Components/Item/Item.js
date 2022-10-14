@@ -23,9 +23,11 @@ import "./Item.css"
         
           <p>Precio: ${producto.Precio}</p>
         </CardContent>
-           <button className="boton" size="large" color="primary">
-       Descripcion
-        </button>
+        <link to ={"/producto/"+ producto.id} >
+              <button className="boton" size="large" color="primary">
+               Descripcion
+              </button>
+        </link>
         </Card>
     </div>    
    );

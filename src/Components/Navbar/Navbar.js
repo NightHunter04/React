@@ -9,6 +9,7 @@ import { Link ,Navlink } from "react-router-dom";
 const Navbar = ({children}) =>{
 
   const categorias = [
+    
     {nombre: "Baterias", id : 0, ruta: "/categoria/Baterias"},
     {nombre: "Platillos", id: 1, ruta :"/categoria/Platillos"},
     {nombre:"Accesorios", id: 2, ruta:"/categoria/Accesorios"},

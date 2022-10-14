@@ -11,7 +11,8 @@ export const ItemDetailContainer = ({ greeting }) => {
       try {
         const res = await fetch("../productos.json")
         const data = await res.json();
-        setProduct(data);
+        setProduct(data.find(productos =>productos.id === 1 ))
+     
       } catch {
         console.log("error");
       } finally {
