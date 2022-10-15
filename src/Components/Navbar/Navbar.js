@@ -24,7 +24,7 @@ const Navbar = ({children}) =>{
           <ul>
             {
              categorias.map ((categoria)=>{
-              return <Link key={categoria.id} to={categoria.ruta}>{categoria.nombre}</Link>
+              return <Link className="linkEstilos" key={categoria.id} to={categoria.ruta}>{categoria.nombre}</Link>
              } )
             }
           </ul> 

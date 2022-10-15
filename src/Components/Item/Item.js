@@ -6,6 +6,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 //import Typography from '@mui/material/Typography';
 import "./Item.css"
+import { Link ,Navlink } from "react-router-dom";
+
 
 
 
@@ -20,14 +22,14 @@ import "./Item.css"
           <p >
             {producto.nombre}
           </p>
-        
-          <p>Precio: ${producto.Precio}</p>
+            <p>Precio: ${producto.Precio}</p>
+          
         </CardContent>
-        <link to ={"/producto/"+ producto.id} >
-              <button className="boton" size="large" color="primary">
+        <Link to ={`/producto/${producto.id} `}>
+        <button className="boton" size="large" color="primary">
                Descripcion
-              </button>
-        </link>
+        </button>
+        </Link>
         </Card>
     </div>    
    );

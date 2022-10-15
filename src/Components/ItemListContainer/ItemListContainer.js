@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
-import ItemDetailContainer from "../Containers/ItemDetailContainer/ItemDetailContainer"
+import { ItemDetailContainer } from "../Containers/ItemDetailContainer/ItemDetailContainer";
 import { useParams } from "react-router-dom";
 
+const body = [
+  {
+    id: 17,
+    categoria :"Home",
+    img: "https://aquilespriester.com/site/wp-content/uploads/2020/08/aquiles-priester-drum-kit-2017-pic-by-arthur-galvao854-1.jpg",
+    
+  },
+]
 const productos = [
   {
     id: 0,
@@ -160,12 +168,6 @@ const productos = [
     descripcion: "loren ipsun",
     img: "https://storage.googleapis.com/tecnowestune/2021/02/e661ebb0-dr-80.jpg",
   },
-  {
-    id: 17,
-    categoria :"Home",
-    img: "https://aquilespriester.com/site/wp-content/uploads/2020/08/aquiles-priester-drum-kit-2017-pic-by-arthur-galvao854-1.jpg",
-    
-  },
   
 ];
 const getData = new Promise(resolve => {
@@ -189,6 +191,7 @@ function ItemListContainer({ greeting }) {
     }
     
     })
+
     .catch ((error) =>{
       console.log("error");
     })

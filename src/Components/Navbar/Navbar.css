@@ -21,7 +21,7 @@ h1 {
 
 
     
-a {  font-size: x-large;
+.linkEstilos {  font-size: x-large;
      display: inline-block;
      justify-content: space-between;
      display: flex;
@@ -34,7 +34,7 @@ a {  font-size: x-large;
 }
     
         
-        a:after {
+.linkEstilos:after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -44,7 +44,7 @@ a {  font-size: x-large;
             background: rgb(214, 64, 64);
             transition: left .8s;
             }
-            a:hover:after {
+            .linkEstilos:hover:after {
             left: 0;}
     
        
