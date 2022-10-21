@@ -11,4 +11,3 @@ export const ItemList = ({data}) => {
     </main>
     );
 };
-

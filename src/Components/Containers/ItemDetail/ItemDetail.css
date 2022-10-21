@@ -1,36 +1,36 @@
 .vistaProducto {
-   border: solid ;
-   border-color: darkslategrey;
-}
-
-
-.imgProducto{
-    display: block;
-}
-
-.nombreProducto{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: xx-large;
-    font-weight: bolder;
-    color: rgb(2, 2, 2);
-    text-align: center;
+    border: solid ;
+    border-color: darkslategrey;
+ }
  
-}
-
-.descripcionProducto{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: xx-large;
-    font-weight: bolder;
-    color: rgb(2, 2, 2);
-    text-align: center;
-    display: block;
-}
-
-.precioProducto{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: xx-large;
-    font-weight: bolder;
-    color: rgb(2, 2, 2);
-    text-align: center;
-    display: block;
-}
+ 
+ .imgProducto{
+     display: block;
+ }
+ 
+ .nombreProducto{
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-size: xx-large;
+     font-weight: bolder;
+     color: rgb(2, 2, 2);
+     text-align: center;
+  
+ }
+ 
+ .descripcionProducto{
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-size: xx-large;
+     font-weight: bolder;
+     color: rgb(2, 2, 2);
+     text-align: center;
+     display: block;
+ }
+ 
+ .precioProducto{
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-size: xx-large;
+     font-weight: bolder;
+     color: rgb(2, 2, 2);
+     text-align: center;
+     display: block;
+ }

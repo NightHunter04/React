@@ -1,5 +1,5 @@
 import React from "react";
-import  './Navbar.css';
+import  './NavBar.css';
 import logo from '../../assets/pearl.jpg';
 import ComponenteNavBar from '../ComponenteNavBar/ComponenteNavBar'
 import { Button } from "@mui/material";

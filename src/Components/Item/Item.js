@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import Card from '@mui/material/Card';
@@ -60,7 +59,6 @@ export default Item;
              <p>{producto.descripcion}</p>
              <h3>${producto.Precio}</h3>
             
-
             
         </div>    
                
@@ -71,4 +69,3 @@ export default Item;
         
     );
 }*/
-
