@@ -3,6 +3,7 @@
     padding: 0;
 }    
 main{
+    
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
@@ -11,6 +12,7 @@ main{
 
 }
 .fondo{
+    background-color: brown;
     margin: 3rem;
     border: 10px;
     border-color: black;

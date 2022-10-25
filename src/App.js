@@ -6,12 +6,12 @@ import {Cart} from "./Components/Containers/CartView/Cart"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "../src/Components/Containers/ItemDetailContainer/ItemDetailContainer"
 import { LandingPage } from "./Components/LandingPage/LandingPage";
-
+import {CustomProvider} from "./Context/CartContext" 
 
 const App = () => {
   const mensaje = "Gracias por visitarnos"
   return (
-    <>
+    <CustomProvider>
     <BrowserRouter>
      <Navbar/> 
      <Routes>
@@ -21,12 +21,11 @@ const App = () => {
           <Route path="/producto/:id" element={<ItemDetailContainer />}/>
      </Routes>
     </BrowserRouter>
-       
+    </CustomProvider>    
           
           
-   
-    </>
-  )
+    )
 }
 
-export default App
+export default App 
+   
