@@ -9,7 +9,7 @@ export const CustomProvider = ({ children }) => {
 
   useEffect(() => {
     setQty(cart.reduce((total, item) => total + item.cantidad, 0))
-    setTotal(cart.reduce((total, item) => total + (item.cantidad * item.price), 0))
+    setTotal(cart.reduce((total, item) => total + (item.cantidad * item.precio), 0))
   }, [])
   
 
@@ -26,14 +26,14 @@ export const CustomProvider = ({ children }) => {
       setCart([...cart, { ...item, cantidad }]);
     }
     setQty(qty + cantidad);
-    setTotal(total + (item.price * cantidad));
+    setTotal(total + (item.precio * cantidad));
   };
 
   const deleteItem = (id) => {
     const found = cart.find(producto => producto.id === id);
     setCart(cart.filter((item) => item.id !== id));
     setQty( qty - found.cantidad)
-    setTotal(total - (found.price * found.cantidad))
+    setTotal(total - (found.precio * found.cantidad))
   };
 
   const IsInCart = (id) => cart.some((item) => item.id === id);

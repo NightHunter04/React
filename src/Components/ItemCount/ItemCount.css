@@ -1,0 +1,33 @@
+.counter{
+    display:inline-flex;
+      margin-left: 200px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+
+.contador{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+.restar{
+    display: block;
+    width: 30px;
+    
+}
+
+.sumar{
+    display: block;
+    width: 30px;
+}
+
+.finalizar{
+    display: inline-block;
+    margin-left: 20px;
+    border-radius: 1px;
+    border-color: rgb(25, 27, 27);
+   
+}

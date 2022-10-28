@@ -2,16 +2,10 @@ import React, { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { ItemDetailContainer } from "../Containers/ItemDetailContainer/ItemDetailContainer";
 import { useParams } from "react-router-dom";
+import {getDocs, collection, query, where} from "firebase/firestore"
+import{db} from "../../firebase/firebase"
 
-const body = [
-  {
-    id: 17,
-    categoria :"Home",
-    img: "https://aquilespriester.com/site/wp-content/uploads/2020/08/aquiles-priester-drum-kit-2017-pic-by-arthur-galvao854-1.jpg",
-    
-  },
-]
-const productos = [
+/*const productos = [
   {
     id: 0,
     categoria: "Baterias",
@@ -174,15 +168,36 @@ const getData = new Promise(resolve => {
   setTimeout(() => {
       resolve(productos);
   }, 2000);
-});
+});*/
 
 function ItemListContainer({ greeting }) {
-  const {id} = useParams ()
-  console.log(id);
+  const {id} = useParams ();
+
+
+  
   const [data, setData] = useState([]);
+  const [loader,setLoader] = useState (true)
+ 
+  const productCollection = collection (db,'productos')
 
   useEffect(() => {
-    getData
+   
+   getDocs (productCollection)
+   .then((result) =>{
+    const listProducts = result.docs.map(item =>{
+      return {
+        ...item.data(),
+        id : item.id,
+      }
+     
+    })
+     setData= (listProducts);
+   })
+   .finally (() => setLoader (false))
+   
+   
+   
+    /* getData
     .then ((data)=>{
      if (id){
       setData(data.filter(productos =>productos.categoria === id ))
@@ -196,8 +211,8 @@ function ItemListContainer({ greeting }) {
       console.log("error");
     })
    
-
-}, [id])
+*/
+}, [id, productCollection])
 
   return (
     <>

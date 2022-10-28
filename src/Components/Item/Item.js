@@ -1,13 +1,8 @@
 import React from 'react';
-
 import Card from '@mui/material/Card';
-//import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-//import Typography from '@mui/material/Typography';
 import "./Item.css"
 import { Link ,Navlink } from "react-router-dom";
-
-
 
 
  function Item({producto}) {
@@ -36,6 +31,9 @@ import { Link ,Navlink } from "react-router-dom";
 export default Item;      
  
   
+
+
+
     
 
 

@@ -1,37 +1,30 @@
-.vistaProducto {
-   
-    border: solid ;
-    border-color: darkslategrey;
- }
+.vistaProducto{
+    background-image: url(../../../assets/bateria.jpeg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+}
  
- 
- .imgProducto{
-     display: block;
- }
- 
- .nombreProducto{
-     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-size: xx-large;
-     font-weight: bolder;
-     color: rgb(2, 2, 2);
-     text-align: center;
-  
- }
- 
- .descripcionProducto{
-     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-size: xx-large;
-     font-weight: bolder;
-     color: rgb(2, 2, 2);
-     text-align: center;
-     display: block;
- }
- 
- .precioProducto{
-     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-size: xx-large;
-     font-weight: bolder;
-     color: rgb(2, 2, 2);
-     text-align: center;
-     display: block;
- }
+
+.imgProducto{
+    opacity: 80%;
+    border: solid;
+    
+}
+
+.descripcionProducto{
+    color: antiquewhite;
+    font-size: x-large;
+}
+
+.precioProducto{
+    color:rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+.finalizar{
+    display: inline-flex;
+   font-size:x-large;
+   background-color: rgb(190, 190, 190);
+}

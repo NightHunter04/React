@@ -1,14 +1,17 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from '../../../Context/CartContext'
+import Item from '../../Item/Item'
+import ItemCart from '../ItemCart/ItemCart'
 import './Cart.css'
+
+
+
 export const Cart = () => {
-  const { cart } = useContext(Context);
-
-
-  
-  return (
-    <>
+const { cart } = useContext(Context);
+ console.log("Cart:", cart)
+return (
+    <div className='cart'>
       {cart.length === 0 ? (
         <>
           <h1 className=' titulo'>
@@ -21,13 +24,15 @@ export const Cart = () => {
         <>
           
           {cart.map((producto) => (
-            <h1 key={producto.id}>{producto.title}</h1>
+            < ItemCart key={producto.id} product ={ producto}/>
            
           ))}
         </>
       )}
-    </>
+    </div>
   );
 };
 
+  
+  
 
