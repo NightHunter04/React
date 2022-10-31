@@ -21,12 +21,12 @@ const ItemDetail = ({listaProducto}) => {
        <img className='imgProducto' alt= {listaProducto.titulo} src= {listaProducto.img}/>
        <h1 className='nombreProducto'>{listaProducto.nombre}</h1>
        <span className=' descripcionProducto'>{listaProducto.descripcion}</span>
-       <h2 className='precioProducto'>{listaProducto.Precio}</h2>
+       <h2 className='precioProducto'>{listaProducto.precio}</h2>
        {! isPressedButton ? (
         <ItemCount stock={10} initial={1} onAdd={onAdd}/>
         ) : (
           <Link  to="/cart">
-            <button className="finalizar">Comprar</button>
+            <button className="finalizar">Agregar</button>
           </Link>
           
         )

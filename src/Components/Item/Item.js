@@ -16,7 +16,7 @@ import { Link ,Navlink } from "react-router-dom";
           <p >
             {producto.nombre}
           </p>
-            <p>Precio: ${producto.Precio}</p>
+            <p>Precio: ${producto.precio}</p>
           
         </CardContent>
         <Link to ={`/producto/${producto.id} `}>

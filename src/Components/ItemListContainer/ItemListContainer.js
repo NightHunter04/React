@@ -116,7 +116,6 @@ import{db} from "../../firebase/firebase"
     descripcion: "loren ipsun",
     img: "https://http2.mlstatic.com/D_NQ_NP_754700-MLA46603816509_072021-O.jpg",
   },
-
   {
     id: 12,
     categoria :"Accesorios",
@@ -181,23 +180,20 @@ function ItemListContainer({ greeting }) {
   const productCollection = collection (db,'productos')
 
   useEffect(() => {
-   
-   getDocs (productCollection)
-   .then((result) =>{
-    const listProducts = result.docs.map(item =>{
+   getDocs(productCollection)
+   .then((resultado)=>{
+    const listProducts = resultado.docs.map (item =>{
       return {
         ...item.data(),
-        id : item.id,
+        id : item.id
       }
-     
     })
-     setData= (listProducts);
+    setData (listProducts)
    })
-   .finally (() => setLoader (false))
    
    
    
-    /* getData
+   
     .then ((data)=>{
      if (id){
       setData(data.filter(productos =>productos.categoria === id ))
@@ -206,12 +202,9 @@ function ItemListContainer({ greeting }) {
     }
     
     })
-
-    .catch ((error) =>{
-      console.log("error");
-    })
+    
    
-*/
+
 }, [id, productCollection])
 
   return (
