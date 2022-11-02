@@ -14,9 +14,9 @@ const ItemCart = ({product}) => {
         <section className="itemCart">
             <img src={product.imagen} alt=""/>
                 <p>Nombre: {product.nombre}</p>
-                <p>Precio: ${product.Precio}</p>
+                <p>Precio: ${product.precio}</p>
                 <p>Cantidad: {product.cantidad}</p>
-                <p>Subtotal: ${product.cantidad * product.Precio}</p>
+                <p>Subtotal: ${product.cantidad * product.precio}</p>
                 <button className="boton__borrar" onClick={()=>deleteItem(product.id)}>
 
                 </button>

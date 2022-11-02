@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
   
 
   const [listaProducto, setListaProducto] = useState({});
-
+  const [loading, setLoading] = useState(true);
   const {id} = useParams();
 
   
@@ -29,7 +29,12 @@ const ItemDetailContainer = () => {
         ...result.data()
       })
     })
-
+.catch((error) =>{
+  console.log ("error")
+})
+.finally (() =>{
+  setLoading (false)
+})
       /*obtenerDatos ()
       .then(data => setListaProducto(data.find(producto=>{
           return producto.id === parseInt (id)
@@ -43,7 +48,7 @@ const ItemDetailContainer = () => {
 
   return(
       <div>
-         <ItemDetail listaProducto={listaProducto}/>
+         { loading ? <h1>Cargando</h1> : <ItemDetail listaProducto={listaProducto} /> }
       </div>
   )
 }
