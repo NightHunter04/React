@@ -4,6 +4,7 @@ import logo from '../../assets/pearl.jpg';
 import ComponenteNavBar from '../ComponenteNavBar/ComponenteNavBar'
 import { Button } from "@mui/material";
 import { Link ,Navlink } from "react-router-dom";
+import { CartWidget } from "../CartWIdget/CartWidget";
 
 
 const Navbar = ({children}) =>{
@@ -30,7 +31,7 @@ const Navbar = ({children}) =>{
           </ul> 
            {children}
      <Link to= "/cart">
-     <button className="carrito"><ComponenteNavBar/></button>
+     <button className="carrito"><CartWidget/></button>
      </Link> 
     
     </header>

@@ -9,7 +9,7 @@ import './Cart.css'
 
 export const Cart = () => {
 const { cart } = useContext(Context);
- console.log("Cart:", cart)
+ 
 return (
     <div className='cart'>
       {cart.length === 0 ? (
