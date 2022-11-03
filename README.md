@@ -2,10 +2,10 @@
 ### eCommerce desarrollado en forma de aprendizaje en React. 
 ### Comision 37740
 ## Utilizacion de:
-####*Firebase
-####*Material-Icons
-####*Css
-####*Sweet-Alert
+*Firebase
+*Material-Icons
+*Css
+*Sweet-Alert
 ### Alumno: Nicolas Dondo
 
 [Visitar el repo](https://github.com/NightHunter04)
