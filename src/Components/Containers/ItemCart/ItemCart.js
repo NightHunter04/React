@@ -10,7 +10,7 @@ const ItemCart = ({product}) => {
     const { deleteItem } = useContext(Context)
     console.log(deleteItem);
     return(
-        <>
+        <div className="compras">
         <section className="itemCart">
             <img src={product.img} alt=""/>
                 <p>Nombre: {product.nombre}</p>
@@ -23,7 +23,7 @@ const ItemCart = ({product}) => {
                   
                     
         </section>
-        </>
+        </div>
     )
 }
 

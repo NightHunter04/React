@@ -1,4 +1,9 @@
+.compras{
+    height: 500;
+}
+
 .itemCart{
+   width: 50px;
     display: block;
-    font-size: x-large;
+    font-size: large;
 }
