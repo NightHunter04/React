@@ -4,6 +4,8 @@ import { ItemDetailContainer } from "../Containers/ItemDetailContainer/ItemDetai
 import { useParams } from "react-router-dom";
 import {getDocs, collection, query, where} from "firebase/firestore"
 import{db} from "../../firebase/firebase"
+import { Ripples } from '@uiball/loaders'
+
 
 
 
@@ -35,22 +37,21 @@ function ItemListContainer({ greeting }) {
     setData (listProducts)
    })
    
-   
-   
-   
-  
-    
-   
-
-}, [id,])
+   }, [id,])
 
   return (
     <>
       <h2>{greeting}</h2>
-      
+     
       <ItemList data={data} />
     </>
   );
 }
 
 export default ItemListContainer;
+   
+   
+  
+    
+   
+
