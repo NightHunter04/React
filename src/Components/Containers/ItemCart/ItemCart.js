@@ -12,7 +12,7 @@ const ItemCart = ({product}) => {
     return(
         <>
         <section className="itemCart">
-            <img src={product.imagen} alt=""/>
+            <img src={product.img} alt=""/>
                 <p>Nombre: {product.nombre}</p>
                 <p>Precio: ${product.precio}</p>
                 <p>Cantidad: {product.cantidad}</p>
