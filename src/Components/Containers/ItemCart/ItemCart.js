@@ -13,13 +13,11 @@ const ItemCart = ({product}) => {
         <div className="compras">
         <section className="itemCart">
             <img src={product.img} alt=""/>
-                <p>Nombre: {product.nombre}</p>
-                <p>Precio: ${product.precio}</p>
-                <p>Cantidad: {product.cantidad}</p>
-                <p>Subtotal: ${product.cantidad * product.precio}</p>
-                <button className="boton__borrar" onClick={()=>deleteItem(product.id)}>
-
-                </button>
+                <p className="nombre">Nombre: {product.nombre}</p>
+                <p className="precio">Precio: ${product.precio}</p>
+                <p className="cantidad">Cantidad: {product.cantidad}</p>
+                <p className="total">Subtotal: ${product.cantidad * product.precio}</p>
+                <button className="boton__borrar" onClick={()=>deleteItem(product.id)}>Eliminar</button>
                   
                     
         </section>

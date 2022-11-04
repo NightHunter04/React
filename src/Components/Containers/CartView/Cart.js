@@ -11,7 +11,7 @@ import { collection, addDoc, serverTimestamp, doc, uddateDoc, updateDoc} from "f
 
 
 export const Cart = () => {
-const { cart, total, clear, qty } = useContext(Context);
+const { cart, total, clear, qty, deleteItem } = useContext(Context);
 
 const comprador = {
   nombre: 'Nico',
@@ -59,8 +59,16 @@ return (
            
           ))}
         </>
+        
       )}
-      <button onClick={actualizarStock}>Finalizar Compra</button>
-    </div>
-  );
-};
+     <div className="detail-cart">
+       <h3>Precio total de compra <span className="total">$ {total}</span></h3>
+           <button className="boton-vaciar" onClick={clear}> Vaciar carrito</button>
+           <Link to="/formulario">
+           <button className="boton-fin">Finalizar compra</button>
+           </Link>
+     </div> 
+ </div>
+ )}      
+           
+        
