@@ -7,8 +7,8 @@ import './ItemCart.css'
 const ItemCart = ({product}) => {
     console.log(product);
 
-    const { deleteItem } = useContext(Context)
-    console.log(deleteItem);
+    const { removeItem } = useContext(Context)
+    console.log(removeItem);
     return(
         <div className="compras">
         <section className="itemCart">
@@ -17,7 +17,7 @@ const ItemCart = ({product}) => {
                 <p className="precio">Precio: ${product.precio}</p>
                 <p className="cantidad">Cantidad: {product.cantidad}</p>
                 <p className="total">Subtotal: ${product.cantidad * product.precio}</p>
-                <button className="boton__borrar" onClick={()=>deleteItem(product.id)}>Eliminar</button>
+                <button className="eliminar" onClick={() => removeItem(product.id)}>XXXX</button>
                   
                     
         </section>

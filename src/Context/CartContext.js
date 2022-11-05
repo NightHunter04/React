@@ -35,7 +35,9 @@ export const CustomProvider = ({ children }) => {
     setQty( qty - found.cantidad)
     setTotal(total - (found.precio * found.cantidad))
   };
-
+  const removeItem = (itemId) => {
+    setCart(cart.filter((item) => item.id !== itemId));
+}
   const IsInCart = (id) => cart.some((item) => item.id === id);
 
   const clear = () => {
@@ -45,7 +47,7 @@ export const CustomProvider = ({ children }) => {
   };
 
   return (
-    <Context.Provider value={{ cart, qty, total, addItem, deleteItem, clear }}>
+    <Context.Provider value={{ cart, qty, total, addItem, deleteItem, clear, removeItem }}>
       {children}
     </Context.Provider>
   );

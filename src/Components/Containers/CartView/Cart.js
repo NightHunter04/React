@@ -11,12 +11,12 @@ import { collection, addDoc, serverTimestamp, doc, uddateDoc, updateDoc} from "f
 
 
 export const Cart = () => {
-const { cart, total, clear, qty, deleteItem } = useContext(Context);
+const { cart, total, clear, qty } = useContext(Context);
 
 const comprador = {
-  nombre: 'Nico',
-  apellido : 'Dondo', 
-  email: 'email@gmail.com'
+  nombre: '',
+  apellido : '', 
+  email: ''
 }
  const finalizarCompra =() =>{
   const ventasCollection = collection (db,"ventas");
@@ -24,12 +24,13 @@ const comprador = {
     comprador,
     items:cart,
     total,
-    date : serverTimestamp()
+    date:serverTimestamp()
   }) 
   .then(result =>{
-    console.log (result)
+    console.log(result.id)
   })
 
+actualizarStock()
   
 clear()
 
@@ -63,12 +64,13 @@ return (
       )}
      <div className="detail-cart">
        <h3>Precio total de compra <span className="total">$ {total}</span></h3>
-           <button className="boton-vaciar" onClick={clear}> Vaciar carrito</button>
            <Link to="/formulario">
-           <button className="boton-fin">Finalizar compra</button>
+           <button className="boton-fin" onClick={finalizarCompra}>Finalizar compra</button>
            </Link>
-     </div> 
+      </div> 
  </div>
- )}      
+ )}             
+           
+   
            
         
