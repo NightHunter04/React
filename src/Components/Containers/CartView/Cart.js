@@ -1,18 +1,23 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from '../../../Context/CartContext'
-import Item from '../../Item/Item'
 import ItemCart from '../ItemCart/ItemCart'
 import './Cart.css'
 import { db } from '../../../firebase/firebase'
 import { collection, addDoc, serverTimestamp, doc, uddateDoc, updateDoc} from "firebase/firestore"
 import Swal from 'sweetalert2'
-
+import Button from '@mui/material/Button'; 
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
+import { useState } from 'react'
 
 
 
 export const Cart = () => {
 const { cart, total, clear, qty } = useContext(Context);
+
+const [ orden, setOrden ] = useState("") 
+console.log (orden)
 
 const comprador = {
   nombre: '',
@@ -29,6 +34,8 @@ const comprador = {
   }) 
   .then(result =>{
     console.log(result.id)
+     setOrden(result.id)
+
     Swal.fire({
       title: 'Muchas Gracias',
       html: `Numero de compra: <b>${result.id}</b>`,
@@ -77,10 +84,9 @@ return (
      <div className="detail-cart">
       
            <Link to="/formulario">
-           <button className="boton-fin" onClick={finalizarCompra}>Finalizar compra</button>
-           Swal.fire('Any fool can use a computer')
+           <Button className="boton-fin" onClick={finalizarCompra} variant="contained" endIcon={<SendIcon />}>Finaliar Compra</Button>
            </Link>
       </div> 
  </div>
  )}             
-           
+ 

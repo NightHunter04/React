@@ -8,7 +8,7 @@ import {Formulario} from "../Formulario/Formulario"
   return (
     <div>
         <h2>
-           Tu codigo de compra es:
+          Tus datos de compra son:
         </h2>
               </div>
  )
