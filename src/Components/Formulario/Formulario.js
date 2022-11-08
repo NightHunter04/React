@@ -3,6 +3,9 @@ import './Formulario.css';
 import { Link } from "react-router-dom";
 import { Context } from "../../Context/CartContext";
 import { Formik } from "formik";
+import Button from '@mui/material/Button'; 
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -50,6 +53,7 @@ const Formulario = () => {
                 }
             }
             onSubmit={(valores, {resetForm})=>{ 
+                console.log (valores)
                 resetForm();
                
                setAlerta(true)
@@ -97,9 +101,9 @@ const Formulario = () => {
                     <div>
                    <div>
                    
-                   <Link to="/Chequear">
-                   <button type="submit">Continuar / Continue</button>
-                   </Link>
+                   
+                   <Button className="boton-fin" onClick={finalizarCompra} variant="contained" endIcon={<SendIcon />}>Finalizar Compra</Button>
+                  
                    </div>
                    
                  

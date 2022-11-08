@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import {useParams} from "react-router-dom"
-import ItemCount from "../../ItemCount/ItemCount";
 import {getDoc, collection, doc, where} from "firebase/firestore"
 import{db} from "../../../firebase/firebase"
+
 
 
 

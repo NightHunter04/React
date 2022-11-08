@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import { useState } from 'react'
+import Formulario from "../../Formulario/Formulario"
 
 
 
@@ -17,8 +18,6 @@ export const Cart = () => {
 const { cart, total, clear, qty } = useContext(Context);
 
 const [ orden, setOrden ] = useState("") 
-console.log (orden)
-
 const comprador = {
   nombre: '',
   apellido : '', 
@@ -83,9 +82,9 @@ return (
       )}
      <div className="detail-cart">
       
-           <Link to="/formulario">
+           <Formulario/>   
            <Button className="boton-fin" onClick={finalizarCompra} variant="contained" endIcon={<SendIcon />}>Finaliar Compra</Button>
-           </Link>
+          
       </div> 
  </div>
  )}             
