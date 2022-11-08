@@ -6,6 +6,7 @@ import ItemCart from '../ItemCart/ItemCart'
 import './Cart.css'
 import { db } from '../../../firebase/firebase'
 import { collection, addDoc, serverTimestamp, doc, uddateDoc, updateDoc} from "firebase/firestore"
+import Swal from 'sweetalert2'
 
 
 
@@ -28,6 +29,17 @@ const comprador = {
   }) 
   .then(result =>{
     console.log(result.id)
+    Swal.fire({
+      title: 'Muchas Gracias',
+      html: `Numero de compra: <b>${result.id}</b>`,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
+    
   })
 
 actualizarStock()
@@ -63,14 +75,12 @@ return (
         
       )}
      <div className="detail-cart">
-       <h3>Precio total de compra <span className="total">$ {total}</span></h3>
+      
            <Link to="/formulario">
            <button className="boton-fin" onClick={finalizarCompra}>Finalizar compra</button>
+           Swal.fire('Any fool can use a computer')
            </Link>
       </div> 
  </div>
  )}             
            
-   
-           
-        

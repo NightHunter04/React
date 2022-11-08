@@ -1,3 +1,9 @@
+.cart{
+    background-image: url(../../../assets/bateria.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 90%;
+}
 
 
 .titulo{

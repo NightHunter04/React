@@ -1,9 +1,28 @@
 .compras{
-    height: 500;
+    background-image: url(../../../assets/bateria.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 90%;
 }
 
-.itemCart{
-   width: 50px;
-    display: block;
-    font-size: large;
+.imagen{
+    height: 350px;
+    margin-left: 450px;
+}
+
+.nombre{
+    text-align: center;
+    
+    display:flex;
+    font-size: x-large;
+    color: antiquewhite;
+}
+
+.eliminar{
+    color: antiquewhite;
+}
+
+.success{
+    margin-left: auto;
+    margin-right: auto;
 }

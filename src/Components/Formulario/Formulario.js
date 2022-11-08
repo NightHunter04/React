@@ -3,7 +3,8 @@ import './Formulario.css';
 import { Link } from "react-router-dom";
 import { Context } from "../../Context/CartContext";
 import { Formik } from "formik";
-import {Cart} from "../../Components/Containers/CartView/Cart"
+
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Formulario = () => {
@@ -27,19 +28,19 @@ const Formulario = () => {
                     let errores = {};
 
                     if(!valor.nombre){
-                     errores.nombre = 'Por favor ingresa un nombre.'
+                     errores.nombre = 'Ingresa un nombre.'
                     } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valor.nombre)){
                         errores.nombre= 'Ingresar solo letras y espacios.'
                     }
 
                     if(!valor.apellido){
-                        errores.apellido = 'Porfavor ingresa un apellido.'
+                        errores.apellido = 'Ingresa un apellido.'
                        }else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valor.apellido)){
                         errores.apellido= 'Ingresar solo letras y espacios.'
                     }
 
                     if(!valor.email){
-                        errores.email= 'Por favor ingresa un email.'
+                        errores.email= 'Ingrese correo valido!!'
                     }else if (! /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valor.email)){
                         errores.email= 'Formato incorrecto.'
                     }
@@ -95,7 +96,10 @@ const Formulario = () => {
                     </div>
                     <div>
                    <div>
+                   
+                   <Link to="/Chequear">
                    <button type="submit">Continuar / Continue</button>
+                   </Link>
                    </div>
                    
                  
