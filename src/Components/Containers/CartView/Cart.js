@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, redirect } from 'react-router-dom'
 import { Context } from '../../../Context/CartContext'
 import ItemCart from '../ItemCart/ItemCart'
 import './Cart.css'
@@ -14,6 +14,7 @@ import Formulario from "../../Formulario/Formulario"
 
 
 
+
 export const Cart = () => {
 const { cart, total, clear, qty } = useContext(Context);
 
@@ -23,6 +24,7 @@ const comprador = {
   apellido : '', 
   email: ''
 }
+
  const finalizarCompra =() =>{
   const ventasCollection = collection (db,"ventas");
   addDoc(ventasCollection, {
@@ -43,7 +45,9 @@ const comprador = {
       },
       hideClass: {
         popup: 'animate__animated animate__fadeOutUp'
-      }
+       
+      },
+    
     })
     
   })
@@ -82,10 +86,10 @@ return (
       )}
      <div className="detail-cart">
       
-           <Formulario/>   
-           <Button className="boton-fin" onClick={finalizarCompra} variant="contained" endIcon={<SendIcon />}>Finaliar Compra</Button>
-          
+           <Formulario/>  
+           <Link to="/"> 
+           <Button className="boton-fin" onClick={finalizarCompra} variant="contained" endIcon={<SendIcon />}>Finalizar Compra</Button>
+          </Link>
       </div> 
  </div>
  )}             
- 

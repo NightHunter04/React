@@ -35,10 +35,7 @@ const ItemDetailContainer = () => {
 .finally (() =>{
   setLoading (false)
 })
-      /*obtenerDatos ()
-      .then(data => setListaProducto(data.find(producto=>{
-          return producto.id === parseInt (id)
-      })))*/
+   
       
   },[id])
   

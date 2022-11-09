@@ -102,8 +102,7 @@ const Formulario = () => {
                    <div>
                    
                    
-                   <Button className="boton-fin" onClick={finalizarCompra} variant="contained" endIcon={<SendIcon />}>Finalizar Compra</Button>
-                  
+                   
                    </div>
                    
                  

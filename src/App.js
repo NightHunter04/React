@@ -8,7 +8,8 @@ import ItemDetailContainer from "../src/Components/Containers/ItemDetailContaine
 import { LandingPage } from "./Components/LandingPage/LandingPage";
 import {CustomProvider} from "./Context/CartContext" 
 import Formulario from "./Components/Formulario/Formulario";
-import Chequear from "./Components/Chequear/Chequear";
+
+
 
 const App = () => {
   const mensaje = "Gracias por visitarnos"
@@ -22,14 +23,15 @@ const App = () => {
           <Route path="/cart" element={<Cart />}/>
           <Route path="/producto/:id" element={<ItemDetailContainer />}/>
           <Route path="/Formulario" element={<Formulario/>}/>
-          <Route path="/Chequear" element={<Chequear />}/>
+          
      </Routes>
+     
     </BrowserRouter>
     </CustomProvider>    
-          
+     
           
     )
 }
-
+    
 export default App 
    
