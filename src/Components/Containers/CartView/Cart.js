@@ -87,7 +87,7 @@ return (
      <div className="detail-cart">
       
            <Formulario/>  
-           <Link to="/"> 
+           <Link to="/> 
            <Button className="boton-fin" onClick={finalizarCompra} variant="contained" endIcon={<SendIcon />}>Finalizar Compra</Button>
           </Link>
       </div> 
